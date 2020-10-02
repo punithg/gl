@@ -56,24 +56,4 @@ public class CompilerService {
 
     }
 
-    public List<LeaderBoardResponseDto> getLeaderBoard(Integer hackathonId){
-
-        List<HackathonLeaderboard> hackathonLeaderboards = hackathonLeaderBoardRepository.findByHackathonId(hackathonId);
-
-        System.out.println(hackathonLeaderboards);
-
-        List<LeaderBoardResponseDto> leaderBoardResponseDtos = new ArrayList<>();
-
-        for(HackathonLeaderboard hackathonLeaderboard : hackathonLeaderboards){
-            User user = userRepository.findUserById(hackathonLeaderboard.getUserId());
-            HackathonTeam hackathonTeam = hackathonTeamRepository.findTeamById(user.getHackathonTeamId());
-            LeaderBoardResponseDto leaderBoardResponseDto = new LeaderBoardResponseDto(user, hackathonLeaderboard,
-                    hackathonTeam.getName());
-
-            leaderBoardResponseDtos.add(leaderBoardResponseDto);
-
-        }
-        return leaderBoardResponseDtos;
-    }
-
 }
