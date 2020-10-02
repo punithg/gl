@@ -10,5 +10,10 @@ import lombok.ToString;
 @NoArgsConstructor
 @ToString
 public class SubmissionResponseDto {
-    private String response;
+    private String error;
+    private String compileStatus;
+    private Integer codeId;
+    private Integer totalTestCases;
+    private Integer passedTestCases;
+    private Integer thresholdTestCases;
 }

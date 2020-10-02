@@ -11,5 +11,5 @@ import lombok.NoArgsConstructor;
 public class Submission {
     private Language language;
     private String version;
-    private String code;
+    private String source;
 }
