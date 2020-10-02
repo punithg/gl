@@ -22,8 +22,8 @@ public class HackathonController {
     @PostMapping(value="/submit")
     public ResponseEntity<?> compileSubmission(@RequestBody HackathonSubmission submission){
         try{
-            compilerService.submitResponse(submission);
             SubmissionResponseDto submissionResponseDto = new SubmissionResponseDto();
+            submissionResponseDto = compilerService.submitResponse(submission);
             return new ResponseEntity<>(submissionResponseDto, HttpStatus.OK);
         }catch (Exception e){
             throw new ServiceException("Error submitting Hackathon response");
