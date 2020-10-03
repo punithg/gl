@@ -7,6 +7,7 @@ Gl Hackathon Demo is a Spring application using MySql as the datasource. The app
 
 I have deployed the application for easier viewing of the project on an AWS ec2 server, below is the link to the live application
 link
+
 http://ec2-52-39-77-93.us-west-2.compute.amazonaws.com:8080
 
 APIs postman collection link (Import in postman using the below link and steps)
@@ -33,4 +34,5 @@ https://www.getpostman.com/collections/52321b02aacd50bc8296
 * Run using ```mvn spring-boot:run```  (If port 8080 is occupied by other app, clear the port using ```fuser -k 8080/tcp```)
 * Once the application has started, use the above postman link to import the API collection
 * Change the server IP to ```http://localhost:8080```
+* Run the APis with the test body added
 
