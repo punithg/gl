@@ -34,6 +34,8 @@ https://www.getpostman.com/collections/52321b02aacd50bc8296
 * After setting up the environment
 * Clone the repository
 * Navigate to the root of the project
+* Run ```mvn clean install``` for maven to install all the required project dependencies
+* Check for SUCCESS message in the build
 * Run using ```mvn spring-boot:run```  (If port 8080 is occupied by other app, clear the port using ```fuser -k 8080/tcp```)
 * Once the application has started, use the above postman link to import the API collection
 * Change the server IP to ```http://localhost:8080```
